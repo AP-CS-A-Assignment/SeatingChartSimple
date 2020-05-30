@@ -14,7 +14,11 @@ import javafx.scene.text.TextAlignment;
 import javafx.stage.Popup;
 import javafx.stage.Stage;
 
+/**
+ * Window that allows for adding a student
+ */
 public class AddStudentWindow extends Stage {
+    //Scene graph
     private Scene scene;
         private VBox vBox;
             private Label info;
@@ -22,9 +26,19 @@ public class AddStudentWindow extends Stage {
             private TextArea inputField;
                 private Button submit;
 
+    /**
+     * The height of the window
+     */
     private double height = 300;
+    /**
+     * The width of the window
+     */
     private double width = 400;
 
+    /**
+     * Sets up the scene graph
+     * @param main
+     */
     public AddStudentWindow(SeatingMain main) {
         super();
         setupPopup();
@@ -66,6 +80,9 @@ public class AddStudentWindow extends Stage {
                 });
     }
 
+    /**
+     * Sets up the parameters of the window
+     */
     private void setupPopup() {
         setWidth(width);
         setHeight(height);

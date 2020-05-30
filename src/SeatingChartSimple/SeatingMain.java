@@ -46,6 +46,13 @@ public class SeatingMain extends Application {
 
     private int arrSize = 5;//Width and Height of the grid
 
+    /**
+     * Essentially the constructor of the class.
+     * <br>Sets up the scene graph and intializes all the nodes.
+     * Fills out the grid with desks
+     * @param stage
+     * @throws Exception
+     */
     @Override
     public void start(Stage stage) throws Exception {
         nameList = new LinkedList<>();
@@ -190,6 +197,10 @@ public class SeatingMain extends Application {
                     }
     }
 
+    /**
+     * Takes the raw string from the input textField and adds all the students it finds.
+     * @param studentsRaw The string of students to add
+     */
     public void fillSeats(String studentsRaw) {
         String[] names = studentsRaw.split("\n");
         for (String name : names) {
@@ -212,6 +223,9 @@ public class SeatingMain extends Application {
         }
     }
 
+    /**
+     * Clears all teh students
+     */
     private void clear()    {
         nameList.clear();
         for (Student[] studentR : students) {
@@ -221,6 +235,9 @@ public class SeatingMain extends Application {
         }
     }
 
+    /**
+     * Sets up the parameters of the stage and loads the icon for the window
+     */
     private void setupStage()   {
         int size = 800;
         stage.setWidth(size);
@@ -235,6 +252,10 @@ public class SeatingMain extends Application {
         stage.show();
     }
 
+    /**
+     * Launches the program
+     * @param args
+     */
     public static void main(String[] args) {
         SeatingMain.launch(args);
     }
