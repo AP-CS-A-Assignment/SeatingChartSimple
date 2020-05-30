@@ -19,7 +19,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.LinkedList;
 
+/**
+ * A Seating Chart that allows for studnets to be added, removed, and swapped.
+ * <br>You can also export and load seating charts
+ */
 public class SeatingMain extends Application {
+    //Scene Graph
     private Stage stage;
     private Scene scene;
     private StackPane root;
@@ -36,10 +41,10 @@ public class SeatingMain extends Application {
                     private MenuItem swapItem;
                     private MenuItem removeItem;
             private GridPane gridPane;
-                private Student[][] students;
+                private Student[][] students; //List of all the students in the grid
                 private LinkedList<String[]> nameList;
 
-    private int arrSize = 5;
+    private int arrSize = 5;//Width and Height of the grid
 
     @Override
     public void start(Stage stage) throws Exception {
